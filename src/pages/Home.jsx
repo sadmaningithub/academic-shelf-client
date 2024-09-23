@@ -1,11 +1,15 @@
 import Banner from "../components/Banner/Banner";
+import StudyMaterials from "../components/StudyMaterials/StudyMaterials";
 
 
 
 const Home = () => {
     return (
-        <div>
-            <Banner></Banner>
+        <div className="">
+            <div className="">
+                <Banner></Banner>
+            </div>
+            <StudyMaterials></StudyMaterials>
         </div>
     );
 };

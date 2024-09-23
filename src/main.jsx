@@ -10,6 +10,8 @@ import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
 import Resources from './pages/Resources';
 import Discussion from './pages/Discussion';
+import Practice from './pages/Practice';
+import AddResource from './pages/AddResource';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
     {
       path: '/discussion',
       element: <Discussion></Discussion>
+    },
+    {
+      path: '/practice',
+      element: <Practice></Practice>
+    },
+    {
+      path: '/addResource',
+      element: <AddResource></AddResource>
     }]
   },
 ]);

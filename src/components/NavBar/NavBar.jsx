@@ -6,7 +6,7 @@ const NavBar = () => {
     const navLinks = <>
         <li> <NavLink to='/'  >Home </NavLink> </li>
         <li> <NavLink to='/resources'> Resources</NavLink> </li>
-        <li> <NavLink to='/practice'> Practice Zone</NavLink> </li>
+        <li> <NavLink to='/practice'> Practice</NavLink> </li>
         <li> <NavLink to='/addResource'>Add Resource</NavLink> </li>
         <li> <NavLink to='/discussion'>Discussion</NavLink> </li>
     </>
