@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
 
     const navLinks = <>
-        <li> <NavLink to='/' >Home </NavLink> </li>
+        <li> <NavLink to='/'  >Home </NavLink> </li>
         <li> <NavLink to='/resources'> Resources</NavLink> </li>
         <li> <NavLink to='/practice'> Practice Zone</NavLink> </li>
         <li> <NavLink to='/addResource'>Add Resource</NavLink> </li>
@@ -12,9 +12,9 @@ const NavBar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-300 border">
-            <div className="navbar max-w-7xl mx-auto">
-                <div className="navbar-start border">
+        <div className=" bg-base-100 ">
+            <div className="navbar max-w-screen-2xl mx-auto">
+                <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg
@@ -36,15 +36,15 @@ const NavBar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <NavLink className='text-3xl font-bold' to='/'>Academic Shelf</NavLink>
                 </div>
-                <div className="navbar-center hidden lg:flex border">
-                    <ul className="menu menu-horizontal px-1">
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal text-base">
                         {navLinks}
                     </ul>
                 </div>
-                <div className="navbar-end border">
-                    <a className="btn">Button</a>
+                <div className="navbar-end">
+                    <a className="btn text-base">Sign up</a>
                 </div>
             </div>
         </div>
