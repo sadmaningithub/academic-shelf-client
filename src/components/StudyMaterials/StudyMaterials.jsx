@@ -28,7 +28,7 @@ const StudyMaterials = () => {
                     videos?.map(video => <VideoCard key={video._id} video={video}></VideoCard>)
                 }
             </div>
-            <button className="btn rounded-3xl">Go to Resources <FaArrowRight /></button>
+            <button className="btn rounded-3xl">See All <FaArrowRight /></button>
         </div>
     );
 };
