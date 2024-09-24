@@ -1,9 +1,13 @@
+import PostCard from "../components/PostCard/PostCard";
 
 
 const Discussion = () => {
     return (
-        <div>
+        <div className="">
             <h1>Discussion</h1>
+            <div className="">
+                <PostCard></PostCard>
+            </div>
         </div>
     );
 };

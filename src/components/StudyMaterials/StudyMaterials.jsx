@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import VideoCard from "../VideoCard/VideoCard";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 
 const StudyMaterials = () => {
@@ -28,7 +29,7 @@ const StudyMaterials = () => {
                     videos?.map(video => <VideoCard key={video._id} video={video}></VideoCard>)
                 }
             </div>
-            <button className="btn rounded-3xl">See All <FaArrowRight /></button>
+            <Link to='/resources' className="btn rounded-3xl "> See All <FaArrowRight /> </Link>
         </div>
     );
 };

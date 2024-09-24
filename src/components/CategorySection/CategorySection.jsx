@@ -19,6 +19,15 @@ const CategorySection = () => {
                 <div className="card p-10 rounded-xl shadow-xl w-full border">
                     <h1 className="card-title justify-center">Intermediate</h1>
                 </div>
+                <div className="card p-10 rounded-xl shadow-xl w-full border">
+                    <h1 className="card-title justify-center">Guides</h1>
+                </div>
+                <div className="card p-10 rounded-xl shadow-xl w-full border">
+                    <h1 className="card-title justify-center">Video Lectures</h1>
+                </div>
+                <div className="card p-10 rounded-xl shadow-xl w-full border">
+                    <h1 className="card-title justify-center">Sheets</h1>
+                </div>
                 
             </div>
         </div>
