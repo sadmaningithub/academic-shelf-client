@@ -13,7 +13,7 @@ const Banner = () => {
                 </p>
                 <div className='flex flex-row items-center' >
                     <input type="text" placeholder="Type here" className="input input-bordered border-r-0 rounded-l-3xl rounded-r-none w-full max-w-md" />
-                    <input className='btn  rounded-l-none rounded-r-3xl' type="submit" value='Search' />
+                    <input className='btn  rounded-l-none rounded-r-3xl bg-[#0096C7]' type="submit" value='Search' />
                 </div>
             </div>
 
