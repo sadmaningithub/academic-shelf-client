@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import communitySvg from '../../assets/svg/discuss.svg'
+import { FaArrowRight } from 'react-icons/fa';
 
 const DiscussionSection = () => {
     return (
@@ -11,7 +12,7 @@ const DiscussionSection = () => {
                 <div className='w-2/3 space-y-7'>
                     <h1 className='text-3xl'>Discussion Community</h1>
                     <p className='text-base'>Use the discussion section to communicate and get your problem solved. There you can post your problems, ask questions, comment to even help each other. You can also request for a resource.</p>
-                    <Link className='btn' to='/discussion'>Go to Discussion</Link>
+                    <Link className='btn rounded-3xl' to='/discussion'>Go to Discussion <FaArrowRight /></Link>
                 </div>
                 <div className='w-1/3'>
                     <img src={communitySvg} className='w-full' alt="" />

@@ -20,7 +20,7 @@ const NewsLetter = () => {
                                 {/* <label className="label">
                                     <span className="label-text">Email</span>
                                 </label> */}
-                                <input type="email" placeholder='email' name="email" className='input input-bordered rounded-l-3xl rounded-r-none w-full' />
+                                <input type="email" placeholder='email' name="email" className='input input-bordered rounded-l-3xl rounded-r-none border-r-0 w-full' />
                                 <input className='btn rounded-l-none rounded-r-3xl' type="submit" value="Subscribe" />
                             </div>
                         </form>

@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import side from '../assets/png/add.png'
 
 const AddResource = () => {
@@ -17,6 +18,26 @@ const AddResource = () => {
         const email = form.email.value;
         const newResource = { title, description, subject, level, type, thumbnail, videoUrl, playlist, userName, email }
         console.log(newResource);
+        fetch('http://localhost:5000/resources', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newResource)
+        })
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data.insertedId);
+            if(data.insertedId){
+                Swal.fire({
+                    title: "Added",
+                    text: "Resource Added Successfully",
+                    icon: "success",
+                    confirmButtonText: "Done"
+                  });
+            }
+            
+        })
     }
 
     return (
