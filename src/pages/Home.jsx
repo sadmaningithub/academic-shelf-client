@@ -1,5 +1,6 @@
 import Banner from "../components/Banner/Banner";
 import CategorySection from "../components/CategorySection/CategorySection";
+import DiscussionSection from "../components/DiscussionSection/DiscussionSection";
 import StudyMaterials from "../components/StudyMaterials/StudyMaterials";
 
 
@@ -12,6 +13,7 @@ const Home = () => {
             </div>
             <StudyMaterials></StudyMaterials>
             <CategorySection></CategorySection>
+            <DiscussionSection></DiscussionSection>
         </div>
     );
 };
