@@ -41,7 +41,7 @@ const PostCard = () => {
                             <label className="label">
                                 <span className="label-text">Title</span>
                             </label>
-                            <input type="email" placeholder="Title" name="title" className="input input-bordered" required />
+                            <input type="text" placeholder="Title" name="title" className="input input-bordered" required />
                         </div>
 
                         <div className="form-control">
