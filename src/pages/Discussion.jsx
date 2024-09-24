@@ -1,4 +1,5 @@
 import PostCard from "../components/PostCard/PostCard";
+import PostCollection from "../components/PostCollection/PostCollection";
 
 
 const Discussion = () => {
@@ -10,6 +11,9 @@ const Discussion = () => {
             </div>
             <div className="">
                 <PostCard></PostCard>
+            </div>
+            <div>
+                <PostCollection></PostCollection>
             </div>
         </div>
     );
