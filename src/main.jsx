@@ -14,6 +14,7 @@ import Practice from './pages/Practice';
 import AddResource from './pages/AddResource';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import VideoPage from './pages/VideoPage';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
     {
       path: '/resources',
       element: <Resources></Resources>
+    },
+    {
+      path: '/resources/:id',
+      element: <VideoPage></VideoPage>,
+      loader: ({params}) => fetch(`http://localhost:5173/resources/${params.id}`)
     },
     {
       path: '/discussion',

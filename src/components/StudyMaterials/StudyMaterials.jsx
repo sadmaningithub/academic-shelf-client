@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const StudyMaterials = () => {
 
-    const [videos, setVideos] = useState()
+    const [videos, setVideos] = useState([])
 
     useEffect(() =>{
         fetch('http://localhost:5000/resources')
