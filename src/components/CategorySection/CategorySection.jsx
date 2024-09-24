@@ -2,7 +2,7 @@
 
 const CategorySection = () => {
     return (
-        <div className="my-10 space-y-7">
+        <div className="mb-20 space-y-7">
             <div className="text-center">
                 <h1 className="text-4xl font-medium">Search by Category</h1>
             </div>

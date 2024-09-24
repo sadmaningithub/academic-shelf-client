@@ -2,7 +2,7 @@ import study from '../../assets/svg/banner.svg'
 
 const Banner = () => {
     return (
-        <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-10 p-10">
+        <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-10 p-10 mb-24">
             
             <div className='w-full'>
                 <img src={study} className="" />
