@@ -12,6 +12,8 @@ import Resources from './pages/Resources';
 import Discussion from './pages/Discussion';
 import Practice from './pages/Practice';
 import AddResource from './pages/AddResource';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
     {
       path: '/addResource',
       element: <AddResource></AddResource>
+    },
+    {
+      path: '/login',
+      element: <Login></Login>
+    },
+    {
+      path: '/signUp',
+      element: <SignUp></SignUp>
     }]
   },
 ]);

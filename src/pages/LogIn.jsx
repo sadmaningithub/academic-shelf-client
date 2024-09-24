@@ -1,6 +1,6 @@
 
 
-const SignUp = () => {
+const Login = () => {
     return (
         <div>
             <div className="hero bg-base-200 min-h-screen">
@@ -14,18 +14,6 @@ const SignUp = () => {
                     </div>
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form className="card-body">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input type="email" placeholder="email" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Profile Picture</span>
-                                </label>
-                                <input type="email" placeholder="email" className="input input-bordered" required />
-                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -52,4 +40,4 @@ const SignUp = () => {
     );
 };
 
-export default SignUp;
+export default Login;
