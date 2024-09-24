@@ -1,13 +1,42 @@
+import { useState } from "react";
 import { IoDocumentTextOutline } from "react-icons/io5";
 
 
 const PostCard = () => {
+
+    const [photos, setPhotos] = useState([])
+
+    const handleAddPost = e => {
+        e.preventDefault();
+        const form = e.target;
+        const title = form.title.value;
+        const subject = form.subject.value;
+        const level = form.level.value;
+        const photoUrl = form.photoUrl.value.split(',');
+        // photoUrl.split('');
+        const description = form.description.value;
+        const postData = { title, subject, level, photoUrl, description }
+        console.log(postData);
+        fetch('http://localhost:5000/posts', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(postData)
+
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
+    }
+
     return (
         <div className="mb-20 ">
-            <div className=" ">
-                <div className="bg-base-300 p-10 rounded-xl max-w-xl ">
+            <div className="flex flex-row justify-center">
+                <div className="w-full lg:w-3/5 bg-base-300 p-10 rounded-xl max-w-xl ">
                     <h1 className="text-3xl font-medium flex flex-row gap-2 items-center justify-center mb-3"> <IoDocumentTextOutline /> Create Post</h1>
-                    <form className="">
+                    <form className="" onSubmit={handleAddPost}>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Title</span>
@@ -60,6 +89,7 @@ const PostCard = () => {
                                 <span className="label-text">Describe</span>
                             </label>
                             <textarea
+                                name="description"
                                 placeholder="Description"
                                 className="textarea textarea-bordered textarea-lg w-full "></textarea>
                         </div>
