@@ -1,4 +1,4 @@
-import study from '../../assets/svg/vecteezy_studying-and-learning-online-concept_1270244.svg'
+import study from '../../assets/svg/banner.svg'
 
 const Banner = () => {
     return (
