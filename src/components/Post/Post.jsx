@@ -1,4 +1,5 @@
 import { FaComment, FaRegComment, FaUserCircle } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
 
 
 const Post = ({ post }) => {
@@ -25,11 +26,12 @@ const Post = ({ post }) => {
                         photoUrl.map(photo => <img className="h-full" key={photo.index} src={photo} alt="" />)
                     }
                 </div>
-                <div className="my-4 space-y-3">
+                <div className="relative my-4 space-y-3">
                     <label className="label">
                         <span className="label-text flex flex-row items-center gap-2"> Comments <FaRegComment /> </span>
                     </label>
                     <input type="text" placeholder="Write your comment..." className="input input-bordered rounded-3xl w-full" />
+                    <span className="absolute text-2xl font-bold right-5 bottom-3"><IoIosSend /></span>
                 </div>
             </div>
 

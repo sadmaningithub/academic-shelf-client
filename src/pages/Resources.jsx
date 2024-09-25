@@ -16,7 +16,7 @@ const Resources = () => {
                 <h1 className="text-3xl font-bold text-white">What are you going to learn today?</h1>
                 <div className='flex flex-row justify-center items-center ' >
                     <input type="text" placeholder="Type here" className="input input-bordered border-r-0 rounded-l-3xl rounded-r-none w-full max-w-md" />
-                    <input className='btn  rounded-l-none rounded-r-3xl border-none bg-[#0096C7]' type="submit" value='Search' />
+                    <input className='btn  rounded-l-none rounded-r-3xl border-none ' type="submit" value='Search' />
                 </div>
             </div>
 
