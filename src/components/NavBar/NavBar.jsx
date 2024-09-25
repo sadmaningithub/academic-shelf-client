@@ -38,7 +38,7 @@ const NavBar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <NavLink className='text-3xl font-bold' to='/'>Academic Shelf</NavLink>
+                    <NavLink className='text-lg lg:text-3xl font-bold' to='/'>Academic Shelf</NavLink>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal text-base">

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
+import { Link, useParams } from "react-router-dom";
 
 
 const VideoPage = () => {
@@ -23,7 +24,11 @@ const VideoPage = () => {
     // console.log(subject);
 
     return (
-        <div className="mb-20 mt-10">
+        <div className="mb-20 mt-5">
+
+            <div className="mb-5">
+                <Link to='/resources' className="btn rounded-3xl"> <FaArrowLeft/>  </Link>
+            </div>
 
             <div className=" lg:max-w-screen-2xl h-[450px] lg:h-[900px] ">
                 <iframe className="w-full h-full" src={videoUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>

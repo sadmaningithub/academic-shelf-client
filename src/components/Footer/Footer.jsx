@@ -1,3 +1,5 @@
+import { BsTwitterX } from "react-icons/bs";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 
 const Footer = () => {
@@ -8,31 +10,41 @@ const Footer = () => {
                     <aside>
                         
                         <div className="space-y-4">
-                            <h1 className="text-3xl font-bold">
+                            <h1 className="text-lg lg:text-3xl font-bold">
                                 Academic Shelf
                             </h1>
                             <p className=""> Providing all in one academic organizer since 2024 </p>
                         </div>
                     </aside>
                     <nav>
-                        <h6 className="footer-title">Services</h6>
-                        <a className="link link-hover">Branding</a>
-                        <a className="link link-hover">Design</a>
-                        <a className="link link-hover">Marketing</a>
-                        <a className="link link-hover">Advertisement</a>
+                        <h6 className="footer-title">Quick Links</h6>
+                        <a className="link link-hover">Home</a>
+                        <a className="link link-hover">About Us</a>
+                        <a className="link link-hover">Resources</a>
+                        <a className="link link-hover">Category</a>
+                        <a className="link link-hover">Discussion</a>
                     </nav>
                     <nav>
-                        <h6 className="footer-title">Company</h6>
-                        <a className="link link-hover">About us</a>
-                        <a className="link link-hover">Contact</a>
-                        <a className="link link-hover">Jobs</a>
-                        <a className="link link-hover">Press kit</a>
+                        <h6 className="footer-title">Help & Support</h6>
+                        <a className="link link-hover">Technical Support</a>
+                        <a className="link link-hover">Student Resources
+                        </a>
+                        <a className="link link-hover">Help Center</a>
+                        <a className="link link-hover">Contact Us</a>
                     </nav>
                     <nav>
                         <h6 className="footer-title">Legal</h6>
                         <a className="link link-hover">Terms of use</a>
                         <a className="link link-hover">Privacy policy</a>
                         <a className="link link-hover">Cookie policy</a>
+                    </nav>
+                    <nav>
+                        <h6 className="footer-title">Social Links</h6>
+                        <div className="flex flex-row items-center gap-3 text-xl">
+                            <div> <FaFacebookF /></div>
+                            <div> <FaInstagram /> </div>
+                            <div> <BsTwitterX /></div>
+                        </div>
                     </nav>
                 </div>
             </footer>

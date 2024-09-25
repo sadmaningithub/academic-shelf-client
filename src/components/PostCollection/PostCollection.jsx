@@ -17,10 +17,10 @@ const PostCollection = () => {
 
     return (
         <div className="my-20 ">
-            <div className="mb-5">
+            {/* <div className="mb-5">
                 <h1 className="text-3xl font-medium">Post Count: {posts.length}</h1>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-7">
+            </div> */}
+            <div className="flex flex-col justify-center items-center gap-7">
                 {
                     posts.map(post => <Post key={post._id} post={post}> </Post>)
                 }

@@ -1,4 +1,4 @@
-import { FaUserCircle } from "react-icons/fa";
+import { FaComment, FaRegComment, FaUserCircle } from "react-icons/fa";
 
 
 const Post = ({ post }) => {
@@ -7,12 +7,12 @@ const Post = ({ post }) => {
 
     return (
         <div>
-            <div className="card w-full shadow-xl border">
+            <div className="card max-w-3xl shadow-xl px-3 border">
 
                 <div className="card-body">
-                    <div className="flex flex-row items-center gap-3">
-                        <FaUserCircle />
-                        <h1>User</h1>
+                    <div className="flex flex-row items-center gap-3 text-xl">
+                        < FaUserCircle />
+                        <h1 className="">User</h1>
                     </div>
                     <h1 className="card-title">{title}</h1>
                     <p>{level}</p>
@@ -20,10 +20,16 @@ const Post = ({ post }) => {
                     <p>{description}</p>
                 </div>
 
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
                     {
-                        photoUrl.map(photo => <img key={photo.index} src={photo} alt="" />)
+                        photoUrl.map(photo => <img className="h-full" key={photo.index} src={photo} alt="" />)
                     }
+                </div>
+                <div className="my-4 space-y-3">
+                    <label className="label">
+                        <span className="label-text flex flex-row items-center gap-2"> Comments <FaRegComment /> </span>
+                    </label>
+                    <input type="text" placeholder="Write your comment..." className="input input-bordered rounded-3xl w-full" />
                 </div>
             </div>
 

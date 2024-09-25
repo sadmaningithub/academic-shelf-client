@@ -32,7 +32,7 @@ const PostCard = () => {
     }
 
     return (
-        <div className="mb-20 ">
+        <div className="">
             <div className="flex flex-row justify-center">
                 <div className="w-full lg:w-3/5 bg-base-300 p-5 lg:p-10 rounded-xl max-w-xl ">
                     <h1 className="text-3xl font-medium flex flex-row gap-2 items-center justify-center mb-3"> <IoDocumentTextOutline /> Create Post</h1>
@@ -79,7 +79,7 @@ const PostCard = () => {
 
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Add Photo</span>
+                                <span className="label-text">Add Photos</span>
                             </label>
                             <input type="text" placeholder="Photo url" name="photoUrl" className="input input-bordered" />
                         </div>

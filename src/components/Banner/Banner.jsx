@@ -2,7 +2,7 @@ import study from '../../assets/svg/banner.svg'
 
 const Banner = () => {
     return (
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-10 px-10 mb-20">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-10 px-10 mb-20 mt-10">
             
             
             <div className='w-full space-y-4 text-center lg:text-left'>
