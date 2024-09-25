@@ -9,7 +9,7 @@ const StudyMaterials = () => {
     const [videos, setVideos] = useState([])
 
     useEffect(() =>{
-        fetch('http://localhost:5000/resources')
+        fetch('http://localhost:5000/resources?limit=3')
         .then(res => res.json())
         .then(data => {
             // console.log(data);
@@ -26,7 +26,7 @@ const StudyMaterials = () => {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 {
-                    videos?.map(video => <VideoCard key={video._id} video={video}></VideoCard>)
+                    videos?.slice(0,3).map(video => <VideoCard key={video._id} video={video}></VideoCard>)
                 }
             </div>
             <Link to='/resources' className="btn rounded-3xl "> See All <FaArrowRight /> </Link>
