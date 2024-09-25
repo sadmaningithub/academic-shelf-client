@@ -19,7 +19,7 @@ const ResourceCard = ({resource}) => {
                     <p> {level} - {subject}</p>
                     <p>{description}</p>
                     <div className="card-actions justify-start">
-                        <Link to={`resources/${_id}`}> <button className="btn rounded-3xl text-white bg-red-500"> <FaPlay /> Watch Now</button> </Link>
+                        <Link to={`/resources/${_id}`}> <button className="btn rounded-3xl text-white bg-red-500"> <FaPlay /> Watch Now</button> </Link>
                     </div>
                 </div>
             </div>

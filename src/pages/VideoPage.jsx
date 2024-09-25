@@ -25,7 +25,7 @@ const VideoPage = () => {
     return (
         <div className="mb-20 mt-10">
 
-            <div className=" lg:max-w-screen-2xl h-[450px] lg:h-[900px] border border-red-500">
+            <div className=" lg:max-w-screen-2xl h-[450px] lg:h-[900px] ">
                 <iframe className="w-full h-full" src={videoUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
 
@@ -39,9 +39,14 @@ const VideoPage = () => {
                 </p>
             </div>
             <div>
-                <p>
-                    <span className="text-base font-bold">Disclaimer:</span> The content provided on this website, including study materials and resources, belongs to their respective creators. This website does not claim ownership of any materials and is not involved in the sale or distribution of any content. All materials are shared solely for educational purposes.
+                <p className="font-bold">
+                    <span className="text-base font-bold text-red-500">Disclaimer:</span> The content provided on this website, including study materials and resources, belongs to their respective creators. This website does not claim ownership of any materials and is not involved in the sale or distribution of any content. All materials are shared solely for educational purposes.
                 </p>
+            </div>
+
+            <div className="flex flex-row justify-center items-center gap-4 mt-5 ">
+                <button className="btn rounded-3xl">Watch later</button>
+                <button className="btn rounded-3xl">Add Playlist</button>
             </div>
         </div>
     );

@@ -1,10 +1,10 @@
-import { useState } from "react";
+
 import { IoDocumentTextOutline } from "react-icons/io5";
 
 
 const PostCard = () => {
 
-    const [photos, setPhotos] = useState([])
+    
 
     const handleAddPost = e => {
         e.preventDefault();
@@ -34,7 +34,7 @@ const PostCard = () => {
     return (
         <div className="mb-20 ">
             <div className="flex flex-row justify-center">
-                <div className="w-full lg:w-3/5 bg-base-300 p-10 rounded-xl max-w-xl ">
+                <div className="w-full lg:w-3/5 bg-base-300 p-5 lg:p-10 rounded-xl max-w-xl ">
                     <h1 className="text-3xl font-medium flex flex-row gap-2 items-center justify-center mb-3"> <IoDocumentTextOutline /> Create Post</h1>
                     <form className="" onSubmit={handleAddPost}>
                         <div className="form-control">
