@@ -64,7 +64,7 @@ const AddResource = () => {
                             <label className="label">
                                 <span className="label-text">Description</span>
                             </label>
-                            <input type="text" placeholder="Description" name="description" className="input input-bordered w-full" required />
+                            <input type="text" placeholder="Description" name="description" className="input input-bordered w-full"  />
                         </div>
 
                         <div className="form-control">
