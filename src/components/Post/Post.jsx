@@ -23,7 +23,7 @@ const Post = ({ post }) => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
                     {
-                        photoUrl.map(photo => <img className="h-full" key={photo.index} src={photo} alt="" />)
+                        photoUrl.map((photo,idx) => <img className="h-full" key={idx} src={photo} alt="" />)
                     }
                 </div>
                 <div className="relative my-4 space-y-3">

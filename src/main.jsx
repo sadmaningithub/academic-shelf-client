@@ -28,7 +28,8 @@ const router = createBrowserRouter([
     {
       path: '/resources',
       element: <Resources></Resources>,
-      loader: () => fetch('http://localhost:5000/resources')
+      loader: () => fetch('http://localhost:5000/resources'),
+      // loader: () => fetch('http://localhost:5000/resourcesCount'),     
     },
     {
       path: '/resources/:id',

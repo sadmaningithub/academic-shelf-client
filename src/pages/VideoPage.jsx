@@ -30,7 +30,7 @@ const VideoPage = () => {
                 <Link to='/resources' className="btn rounded-3xl"> <FaArrowLeft/>  </Link>
             </div>
 
-            <div className=" lg:max-w-screen-2xl h-[450px] lg:h-[900px] ">
+            <div className="max-w-xs lg:max-w-screen-2xl h-[180px] lg:h-[900px] ">
                 <iframe className="w-full h-full" src={videoUrl} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
 
@@ -39,7 +39,7 @@ const VideoPage = () => {
                 <h2><span className="text-base font-bold">Class:</span> {level}</h2>
                 <h2><span className="text-base font-bold">Subject:</span> {subject}</h2>
                 <p className="text-base"><span className="text-base font-bold">Description:</span> <br /> <br /> {description}</p>
-                <p>
+                <p className="max-w-xs lg:max-w-full text-wrap ">
                   <span className="text-base font-bold">Playlist: </span> <a href={playlist} target="_blank" className="text-blue-500 my-3">{playlist}</a>
                 </p>
             </div>
