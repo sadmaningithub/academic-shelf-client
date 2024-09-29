@@ -42,6 +42,18 @@ const Resources = () => {
         setCurrentPage(1)
     }
 
+    const handlePrevPage = () =>{
+        if(currentPage > 1){
+            setCurrentPage(currentPage - 1)
+        }
+    }
+
+    const handleNextPage = () =>{
+        if(currentPage < pages.length){
+            setCurrentPage(currentPage+1)
+        }
+    }
+
     return (
         <div className="mb-20">
 
@@ -60,7 +72,7 @@ const Resources = () => {
             </div>
             <div className="flex flex-row justify-center gap-3">
                 <p>Current page: {currentPage}</p>
-                <button className="btn">Previous</button>
+                <button className="btn" onClick={handlePrevPage}>Previous</button>
                 {
                     pages.map(page => <button onClick={()=> setCurrentPage(page)} key={page} className="btn">{page} </button>)
                 }
@@ -70,7 +82,7 @@ const Resources = () => {
                     <option value="20">20</option>
                     <option value="30">30</option>
                 </select>
-                <button className="btn">Next</button>
+                <button onClick={handleNextPage} className="btn">Next</button>
             </div>
         </div>
     );
