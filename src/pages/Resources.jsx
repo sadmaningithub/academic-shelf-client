@@ -8,6 +8,7 @@ const Resources = () => {
 
     const [productCount, setProductCount] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(5);
+    const [currentPage, setCurrentPage] = useState(1);
 
     const numberOfPages = Math.ceil(productCount/itemsPerPage)
 
@@ -38,6 +39,7 @@ const Resources = () => {
         const val = parseInt(e.target.value);
         // console.log(val);
         setItemsPerPage(val)
+        setCurrentPage(1)
     }
 
     return (
@@ -57,9 +59,10 @@ const Resources = () => {
                 }
             </div>
             <div className="flex flex-row justify-center gap-3">
+                <p>Current page: {currentPage}</p>
                 <button className="btn">Previous</button>
                 {
-                    pages.map(page => <button key={page} className="btn">{page} </button>)
+                    pages.map(page => <button onClick={()=> setCurrentPage(page)} key={page} className="btn">{page} </button>)
                 }
                 <select name="" value={itemsPerPage} onChange={handleItemsPerPage} id="">
                     <option value="5">5</option>
