@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 const Resources = () => {
 
     const [productCount, setProductCount] = useState(0);
-    const itemsPerPage = 5;
+    const [itemsPerPage, setItemsPerPage] = useState(5);
+
     const numberOfPages = Math.ceil(productCount/itemsPerPage)
 
     const pages = [];
@@ -20,15 +21,7 @@ const Resources = () => {
 
     const resources = useLoaderData();
 
-    // const resourceCount = {
-    //     count: 10
-    // }
-
-    // const { count } = resourceCount;
-
-    // console.log( count);
-
-    // console.log(resources);
+    
     useEffect(()=>{
         fetch('http://localhost:5000/resourcesCount')
         .then(res => res.json())
@@ -41,7 +34,11 @@ const Resources = () => {
         })
     },[productCount])
 
-    // console.log(itemsPerPage, productCount, numberOfPages);
+    const handleItemsPerPage = e =>{
+        const val = parseInt(e.target.value);
+        // console.log(val);
+        setItemsPerPage(val)
+    }
 
     return (
         <div className="mb-20">
@@ -64,6 +61,12 @@ const Resources = () => {
                 {
                     pages.map(page => <button key={page} className="btn">{page} </button>)
                 }
+                <select name="" value={itemsPerPage} onChange={handleItemsPerPage} id="">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                </select>
                 <button className="btn">Next</button>
             </div>
         </div>
