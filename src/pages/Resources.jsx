@@ -6,11 +6,11 @@ import { useEffect, useState } from "react";
 
 const Resources = () => {
 
-    const [productCount, setProductCount] = useState(0);
+    const [resourceCount, setResourceCount] = useState(0);
     const [itemsPerPage, setItemsPerPage] = useState(5);
     const [currentPage, setCurrentPage] = useState(1);
 
-    const numberOfPages = Math.ceil(productCount/itemsPerPage)
+    const numberOfPages = Math.ceil(resourceCount/itemsPerPage)
 
     const pages = [];
     for(let i = 1; i <= numberOfPages; i++){
@@ -30,10 +30,10 @@ const Resources = () => {
             // console.log(data);
             const {count } = data
             // console.log(count);
-            setProductCount(count)
+            setResourceCount(count)
 
         })
-    },[productCount])
+    },[resourceCount])
 
     const handleItemsPerPage = e =>{
         const val = parseInt(e.target.value);

@@ -15,6 +15,11 @@ import AddResource from './pages/AddResource';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import VideoPage from './pages/VideoPage';
+import Dashboard from './layouts/Dashboard';
+import DashboardHome from './pages/DashboardPages/DashboardHome';
+import Schedule from './pages/DashboardPages/Schedule';
+import Budget from './pages/DashboardPages/Budget';
+import Planner from './pages/DashboardPages/Planner';
 
 const router = createBrowserRouter([
   {
@@ -26,37 +31,57 @@ const router = createBrowserRouter([
       element: <Home></Home>
     },
     {
-      path: '/resources',
+      path: 'resources',
       element: <Resources></Resources>,
       loader: () => fetch('http://localhost:5000/resources'),
       // loader: () => fetch('http://localhost:5000/resourcesCount'),     
     },
     {
-      path: '/resources/:id',
+      path: 'resources/:id',
       element: <VideoPage></VideoPage>,
-      loader: ({params}) => fetch(`http://localhost:5173/resources/${params.id}`)
+      loader: ({ params }) => fetch(`http://localhost:5173/resources/${params.id}`)
     },
     {
-      path: '/discussion',
+      path: 'discussion',
       element: <Discussion></Discussion>
     },
     {
-      path: '/practice',
+      path: 'practice',
       element: <Practice></Practice>
     },
     {
-      path: '/addResource',
+      path: 'addResource',
       element: <AddResource></AddResource>
     },
     {
-      path: '/login',
+      path: 'login',
       element: <Login></Login>
     },
     {
-      path: '/signUp',
+      path: 'signUp',
       element: <SignUp></SignUp>
     }]
   },
+  {
+    path: 'dashboard',
+    element: <Dashboard />,
+    children: [{
+      path: 'home',
+      element: <DashboardHome />
+    },
+    {
+      path: 'schedule',
+      element: <Schedule />
+    },
+    {
+      path: 'budget',
+      element: <Budget />
+    },
+    {
+      path: 'planner',
+      element: <Planner />
+    }]
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(
