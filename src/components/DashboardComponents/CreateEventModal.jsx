@@ -2,15 +2,21 @@
 
 const CreateEventModal = () => {
     return (
-        <div className="bg-gray-100 w-full border border-purple-500">
-            <form className="flex flex-col justify-between  border border-orange-500" >
-                <input className="input input-bordered" type="text" name="title" />
-                <input type="text" name="subject" />
-                <input type="text" name="instructor" />
-                <input type="datetime-local" name="startTime" />
-                <input type="datetime-local" name="endTime" />
-                <input type="submit" value='Create' />
-            </form>
+        <div className="fixed inset-0 flex items-center justify-center p-5 border bg-black/50 z-10 border-cyan-700 ">
+            <div className="flex flex-col bg-white ">
+                <span className="text-base">Create Event</span>
+                <form className="flex flex-col justify-between gap-2 p-5 border border-orange-500" >
+                    <label className="label">Title</label>
+                    <input className="input input-bordered" type="text" name="title" />
+                    <label className="label">Subject</label>
+                    <input className="input input-bordered" type="text" name="subject" />
+                    <input className="input input-bordered" type="text" name="instructor" />
+                    {/* <input className="" type="color" name="" id="" /> */}
+                    <input className="input input-bordered" type="datetime-local" name="startTime" />
+                    <input className="input input-bordered" type="datetime-local" name="endTime" />
+                    <input className="btn" type="submit" value='Create' />
+                </form>
+            </div>
         </div>
     );
 };

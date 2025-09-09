@@ -3,13 +3,14 @@ import { useState } from "react";
 import BigCalendar from "../../components/DashboardComponents/BigCalendar";
 import { FaPlus } from "react-icons/fa";
 import CreateEventModal from "../../components/DashboardComponents/CreateEventModal";
+import { createPortal } from "react-dom";
 
 const Schedule = () => {
 
     const [showModal, setShowModal] = useState(false)
 
     return (
-        <div className="w-full flex flex-col md:flex-row justify-between items-center relative border ">
+        <div className="w-full flex flex-col md:flex-row justify-between items-center relative border border-black">
             {/* <div>
             <h1>Schedule</h1>
             </div> */}
@@ -23,11 +24,17 @@ const Schedule = () => {
                 </div>
 
             </div>
-            <div className="absolute max-w-lg w-full z-10 ">
+
+            
                 {
-                    showModal && <CreateEventModal />
+                    showModal && createPortal(
+                        <CreateEventModal />,
+                        document.body
+                    )
                 }
-            </div>
+
+          
+
         </div>
     );
 };
